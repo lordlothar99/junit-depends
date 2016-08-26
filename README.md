@@ -1,4 +1,4 @@
-# Junit-depends [![Build Status](https://travis-ci.org/lordlothar99/junit-depends.svg?branch=master)](https://travis-ci.org/lordlothar99/junit-depends) [![Coverage Status](https://coveralls.io/repos/github/lordlothar99/junit-depends/badge.svg?branch=master)](https://coveralls.io/github/lordlothar99/junit-depends?branch=master)
+# Junit-depends [![Build Status](https://travis-ci.org/lordlothar99/junit-depends.svg?branch=master)](https://travis-ci.org/lordlothar99/junit-depends) [![Coverage Status](https://coveralls.io/repos/github/lordlothar99/junit-depends/badge.svg)](https://coveralls.io/github/lordlothar99/junit-depends)
 
 Junit extension allowing dependency between test methods
 
