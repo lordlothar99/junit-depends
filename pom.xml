@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -9,7 +10,7 @@
 	<name>${project.artifactId}</name>
 	<description>Junit extension allowing dependency between test methods</description>
 	<url>https://github.com/lordlothar99/junit-depends</url>
-	<inceptionYear>2013</inceptionYear>
+	<inceptionYear>2016</inceptionYear>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -24,6 +25,7 @@
 		<project.scm.id>github</project.scm.id>
 		<github.global.server>github</github.global.server>
 		<maven.jacoco.version>0.7.7.201606060606</maven.jacoco.version>
+        <maven.coveralls.version>4.1.0</maven.coveralls.version>
 	</properties>
 
 	<licenses>
@@ -39,18 +41,17 @@
 			<artifactId>junit</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.assertj</groupId>
 			<artifactId>assertj-core</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-logging</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -118,6 +119,14 @@
 					</execution>
 				</executions>
 			</plugin>
+            <plugin>
+                <groupId>org.eluder.coveralls</groupId>
+                <artifactId>coveralls-maven-plugin</artifactId>
+                <version>${maven.coveralls.version}</version>
+                <configuration>
+                    <repoToken>${coveralls.repoToken}</repoToken>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 
