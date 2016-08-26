@@ -30,3 +30,22 @@ Add required dependencies to your pom (latest version is highest tag created on 
 * Annotate your Junit test with `@RunWith(DependencyRunner.class)`
 * Define dependencies between tests with `@DependsOn(<method names>)`
 
+## Example
+
+    @Test
+    public void test_method1() {
+        ...
+    }
+
+    @Test
+    @DependsOn("test_method3")
+    public void test_method2() {
+        ...
+    }
+
+    @Test
+    public void test_method3() {
+        ...
+    }
+
+Methods will be executed in following order : test_method1 > test_method3 > test_method2
